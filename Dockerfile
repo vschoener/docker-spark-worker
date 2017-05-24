@@ -1,0 +1,1 @@
+FROM singularities/spark:2.1

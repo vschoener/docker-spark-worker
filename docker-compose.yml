@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ws-spark-worker:
+    build: .
+    command: start-spark worker ws-spark
+    environment:
+      SPARK_WORKER_CORES: 1
+      SPARK_WORKER_MEMORY: 1g
+    ports:
+      - 8081
+    networks:
+      - ws_backend
+    restart: always
+
+networks:
+  ws_backend:
+    external:
+      name: ws_backend
