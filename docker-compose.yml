@@ -5,8 +5,8 @@ services:
     build: .
     command: start-spark worker ws-spark
     environment:
-      SPARK_WORKER_CORES: 1
-      SPARK_WORKER_MEMORY: 1g
+      SPARK_WORKER_CORES: 2
+      SPARK_WORKER_MEMORY: 128mb
     ports:
       - 8081
     networks:
